@@ -1,91 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My To-Do List</title>
-  </head>
-  <body>
-    <div id="content">
-      <header class="header">
-        <h1 class="title">My To-Do List</h1>
-      </header>
-      <main class="main">
-        <div class="color-keys">
-          <span class="dot p-completed"></span>
-          <p class="c-key-text">Complete</p>
-          <span class="dot p-low"></span>
-          <p class="c-key-text">Low</p>
-          <span class="dot p-medium"></span>
-          <p class="c-key-text">Medium</p>
-          <span class="dot p-high"></span>
-          <p class="c-key-text">High</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My To-Do List</title>
+    </head>
+    <body>
+        <div id="content">
+            <header class="header">
+                <h1 class="title">My To-Do List</h1>
+            </header>
+            <main class="main">
+                <div class="color-keys">
+                    <span class="dot p-completed"></span>
+                    <p class="c-key-text">Complete</p>
+                    <span class="dot p-low"></span>
+                    <p class="c-key-text">Low</p>
+                    <span class="dot p-medium"></span>
+                    <p class="c-key-text">Medium</p>
+                    <span class="dot p-high"></span>
+                    <p class="c-key-text">High</p>
+                </div>
+                <div class="todo-items">
+                    <div class="todo p-completed">
+                        <button class="todo-details">?</button>
+                        <div class="todo-name">ToDo Item</div>
+                        <div class="remove-todo">X</div>
+                    </div>
+
+                    <div class="todo p-low">
+                        <button class="todo-details">?</button>
+                        <div class="todo-name">ToDo Item</div>
+                        <div class="remove-todo">X</div>
+                    </div>
+
+                    <div class="todo p-medium">
+                        <button class="todo-details">?</button>
+                        <div class="todo-name">ToDo Item</div>
+                        <div class="remove-todo">X</div>
+                    </div>
+
+                    <div class="todo p-high">
+                        <button class="todo-details">?</button>
+                        <div class="todo-name">ToDo Item</div>
+                        <div class="remove-todo">X</div>
+                    </div>
+                </div>
+            </main>
+            <aside class="sidebar">
+                <div class="todo-filters">
+                    <h2>Filters</h2>
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all-categories">All Categories</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                        <option value="house">House</option>
+                    </select>
+
+                    <label for="date-filter">Date:</label>
+                    <select id="date-filter">
+                        <option value="all-dates">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="this-week">This Week</option>
+                        <option value="this-month">This Month</option>
+                    </select>
+
+                    <label for="priority-filter">Priority:</label>
+                    <select id="priority-filter">
+                        <option value="all-priorities">All Priorities</option>
+                        <option value="complete">Complete</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <hr />
+
+                <div id="todo-options">
+                    <h2>Options</h2>
+                    <div id="option-buttons">
+                        <button id="add-remove-category">+ - Category</button>
+                        <button id="add-todo">+ ToDo</button>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <div class="todo-items">
-          <div class="todo p-completed">
-            <button class="todo-details">?</button>
-            <div class="todo-name">ToDo Item</div>
-            <div class="remove-todo">X</div>
-          </div>
-
-          <div class="todo p-low">
-            <button class="todo-details">?</button>
-            <div class="todo-name">ToDo Item</div>
-            <div class="remove-todo">X</div>
-          </div>
-
-          <div class="todo p-medium">
-            <button class="todo-details">?</button>
-            <div class="todo-name">ToDo Item</div>
-            <div class="remove-todo">X</div>
-          </div>
-
-          <div class="todo p-high">
-            <button class="todo-details">?</button>
-            <div class="todo-name">ToDo Item</div>
-            <div class="remove-todo">X</div>
-          </div>
-        </div>
-      </main>
-      <aside class="sidebar">
-        <div class="todo-filters">
-          <h2>Filters</h2>
-          <label for="category-filter">Category:</label>
-          <select id="category-filter">
-            <option value="all-categories">All Categories</option>
-            <option value="work">Work</option>
-            <option value="study">Study</option>
-            <option value="house">House</option>
-          </select>
-
-          <label for="date-filter">Date:</label>
-          <select id="date-filter">
-            <option value="all-dates">All Dates</option>
-            <option value="today">Today</option>
-            <option value="this-week">This Week</option>
-            <option value="this-month">This Month</option>
-          </select>
-
-          <label for="priority-filter">Priority:</label>
-          <select id="priority-filter">
-            <option value="all-priorities">All Priorities</option>
-            <option value="complete">Complete</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-        </div>
-
-        <hr />
-
-        <div id="todo-options">
-          <h2>Options</h2>
-          <div id="option-buttons">
-            <button id="add-remove-category">+ - Category</button>
-            <button id="add-todo">+ ToDo</button>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </body>
+    </body>
 </html>

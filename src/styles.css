@@ -1,225 +1,225 @@
 :root {
-  --primary: #333;
-  --secondary: #eee;
-  --neutral: #ddd;
+    --primary: #333;
+    --secondary: #eee;
+    --neutral: #ddd;
 
-  --priority-completed: hsl(120, 100%, 35%);
-  --priority-low: hsl(60, 100%, 45%);
-  --priority-medium: hsl(39, 100%, 55%);
-  --priority-high: hsl(0, 100%, 55%);
+    --priority-completed: hsl(120, 100%, 35%);
+    --priority-low: hsl(60, 100%, 45%);
+    --priority-medium: hsl(39, 100%, 55%);
+    --priority-high: hsl(0, 100%, 55%);
 
-  --font-family: sans-serif;
-  font-family: var(--font-family);
+    --font-family: sans-serif;
+    font-family: var(--font-family);
 
-  --side-padding: clamp(16px, 4.35px + 2.33vw, 64px);
-  background-color: var(--secondary);
+    --side-padding: clamp(16px, 4.35px + 2.33vw, 64px);
+    background-color: var(--secondary);
 
-  --intro-title: 48px;
-  --intro-title-big: 64px;
+    --intro-title: 48px;
+    --intro-title-big: 64px;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 #content {
-  min-height: 100vh;
-  display: grid;
-  grid-template:
-    "header" auto
-    "main" 1fr
-    "sidebar" auto
-    / 1fr;
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+        'header' auto
+        'main' 1fr
+        'sidebar' auto
+        / 1fr;
 }
 
 .header,
 .main,
 .sidebar {
-  padding: 24px var(--side-padding);
+    padding: 24px var(--side-padding);
 }
 
 .header {
-  grid-area: header;
-  background-color: var(--primary);
-  color: var(--secondary);
-  text-align: center;
+    grid-area: header;
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: center;
 }
 
 .header .title {
-  font-size: var(--intro-title);
+    font-size: var(--intro-title);
 }
 
 .main {
-  grid-area: main;
-  background-color: var(--neutral);
+    grid-area: main;
+    background-color: var(--neutral);
 }
 
 .sidebar {
-  grid-area: sidebar;
-  background-color: var(--primary);
-  color: var(--secondary);
+    grid-area: sidebar;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 .todo-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .todo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  padding: 2px;
-  flex: 1 1 100%;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 2px;
+    flex: 1 1 100%;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .todo-details,
 .remove-todo {
-  border: 1px solid var(--secondary);
-  background-color: var(--primary);
-  color: var(--secondary);
-  font-size: 1.5rem;
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 1.5rem;
 }
 
 .todo-name {
-  color: var(--primary);
-  font-size: 2rem;
-  font-weight: 900;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .todo-details {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .remove-todo {
-  padding: 2px 4px;
+    padding: 2px 4px;
 }
 
 .p-completed {
-  background-color: var(--priority-completed);
+    background-color: var(--priority-completed);
 }
 
 .p-low {
-  background-color: var(--priority-low);
+    background-color: var(--priority-low);
 }
 
 .p-medium {
-  background-color: var(--priority-medium);
+    background-color: var(--priority-medium);
 }
 
 .p-high {
-  background-color: var(--priority-high);
+    background-color: var(--priority-high);
 }
 
 .color-keys {
-  margin-bottom: 24px;
-  display: flex;
-  justify-content: center;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
 }
 
 .dot {
-  height: 33px;
-  width: 33px;
-  border-radius: 50%;
-  display: inline-block;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .c-key-text {
-  display: inline-block;
-  margin: 8px 8px 0 8px;
+    display: inline-block;
+    margin: 8px 8px 0 8px;
 }
 
 .todo-filters {
-  margin: 0 0 16px 0;
-  display: flex;
-  flex-direction: column;
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #todo-options {
-  margin: 16px 0 16px 0;
+    margin: 16px 0 16px 0;
 }
 
 #temp-category-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar label {
-  margin-bottom: 4px !important;
+    margin-bottom: 4px !important;
 }
 
 .sidebar h2 {
-  margin: 0 0 16px 0;
+    margin: 0 0 16px 0;
 }
 
-.sidebar [id$="filter"],
+.sidebar [id$='filter'],
 .sidebar button,
 .todo {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .sidebar button {
-  padding: 4px;
-  width: 88px;
-  margin-bottom: 16px;
+    padding: 4px;
+    width: 88px;
+    margin-bottom: 16px;
 }
 
 #temp-category-buttons,
 #option-buttons {
-  display: flex;
-  gap: 6px;
+    display: flex;
+    gap: 6px;
 }
 
-.sidebar [id$="filter"] {
-  margin-bottom: 16px;
+.sidebar [id$='filter'] {
+    margin-bottom: 16px;
 }
 
-.sidebar [id$="filter"]:focus {
-  outline: 0;
+.sidebar [id$='filter']:focus {
+    outline: 0;
 }
 
-.sidebar input[type="text"] {
-  padding: 2px;
-  margin-bottom: 16px;
+.sidebar input[type='text'] {
+    padding: 2px;
+    margin-bottom: 16px;
 }
 
-.sidebar input[type="text"]:focus {
-  outline-color: var(--primary);
+.sidebar input[type='text']:focus {
+    outline-color: var(--primary);
 }
 
 @media (min-width: 900px) {
-  #content {
-    grid-template:
-      "sidebar header" auto
-      "sidebar main" 1fr
-      / auto 1fr;
-  }
+    #content {
+        grid-template:
+            'sidebar header' auto
+            'sidebar main' 1fr
+            / auto 1fr;
+    }
 
-  .header .title {
-    font-size: var(--intro-title-big);
-  }
+    .header .title {
+        font-size: var(--intro-title-big);
+    }
 
-  .sidebar label {
-    margin-bottom: 4px;
-  }
+    .sidebar label {
+        margin-bottom: 4px;
+    }
 
-  .todo-filters {
-    margin-top: 100px;
-  }
+    .todo-filters {
+        margin-top: 100px;
+    }
 
-  .todo {
-    margin: 16px;
-    max-width: 900px;
-  }
+    .todo {
+        margin: 16px;
+        max-width: 900px;
+    }
 }

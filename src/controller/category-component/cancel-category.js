@@ -1,9 +1,9 @@
 export default function cancelCategorySubmit(
-  toDoOptions,
-  optionButtons,
-  addCategoryInputText
+    toDoOptions,
+    optionButtons,
+    addCategoryInputText,
 ) {
-  addCategoryInputText.value = null;
-  toDoOptions.removeChild(toDoOptions.lastChild);
-  toDoOptions.appendChild(optionButtons);
+    addCategoryInputText.value = null;
+    toDoOptions.removeChild(toDoOptions.lastChild);
+    toDoOptions.appendChild(optionButtons);
 }

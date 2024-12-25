@@ -1,0 +1,63 @@
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.todo-filters {
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-options {
+    margin: 16px 0 16px 0;
+}
+
+#temp-category-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar label {
+    margin-bottom: 4px !important;
+}
+
+.sidebar h2 {
+    margin: 0 0 16px 0;
+}
+
+.sidebar [id$='filter'],
+.sidebar button,
+.todo {
+    cursor: pointer;
+}
+
+.sidebar button {
+    padding: 4px;
+    width: 88px;
+    margin-bottom: 16px;
+}
+
+#temp-category-buttons,
+#option-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.sidebar [id$='filter'] {
+    margin-bottom: 16px;
+}
+
+.sidebar [id$='filter']:focus {
+    outline: 0;
+}
+
+.sidebar input[type='text'] {
+    padding: 2px;
+    margin-bottom: 16px;
+}
+
+.sidebar input[type='text']:focus {
+    outline-color: var(--primary);
+}

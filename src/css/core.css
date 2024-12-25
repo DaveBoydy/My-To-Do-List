@@ -1,0 +1,20 @@
+#content {
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+        'header' auto
+        'main' 1fr
+        'sidebar' auto
+        / 1fr;
+}
+
+.header,
+.main,
+.sidebar {
+    padding: 24px var(--side-padding);
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--neutral);
+}

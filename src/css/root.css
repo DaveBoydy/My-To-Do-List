@@ -1,0 +1,19 @@
+:root {
+    --primary: #333;
+    --secondary: #eee;
+    --neutral: #ddd;
+
+    --priority-completed: hsl(120, 100%, 35%);
+    --priority-low: hsl(60, 100%, 45%);
+    --priority-medium: hsl(39, 100%, 55%);
+    --priority-high: hsl(0, 100%, 55%);
+
+    --font-family: sans-serif;
+    font-family: var(--font-family);
+
+    --side-padding: clamp(16px, 4.35px + 2.33vw, 64px);
+    background-color: var(--secondary);
+
+    --intro-title: 48px;
+    --intro-title-big: 64px;
+}

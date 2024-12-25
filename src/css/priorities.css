@@ -1,0 +1,33 @@
+.p-completed {
+    background-color: var(--priority-completed);
+}
+
+.p-low {
+    background-color: var(--priority-low);
+}
+
+.p-medium {
+    background-color: var(--priority-medium);
+}
+
+.p-high {
+    background-color: var(--priority-high);
+}
+
+.color-keys {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.c-key-text {
+    display: inline-block;
+    margin: 8px 8px 0 8px;
+}

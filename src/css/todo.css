@@ -1,0 +1,41 @@
+.todo-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 2px;
+    flex: 1 1 100%;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.todo-details,
+.remove-todo {
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.todo-name {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.todo-details {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.remove-todo {
+    padding: 2px 4px;
+}

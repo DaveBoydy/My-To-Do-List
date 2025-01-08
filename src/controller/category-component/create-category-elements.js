@@ -7,7 +7,7 @@ addCategoryInputLabel.setAttribute('for', 'add-remove-category-input');
 export const addCategoryInputText = document.createElement('input');
 addCategoryInputText.setAttribute('type', 'text');
 addCategoryInputText.setAttribute('id', 'add-remove-category-input');
-addCategoryInputText.setAttribute('placeholder', 'Enter a category name');
+addCategoryInputText.setAttribute('placeholder', 'Enter a name');
 
 export const submitCategory = document.createElement('button');
 submitCategory.textContent = 'Submit';

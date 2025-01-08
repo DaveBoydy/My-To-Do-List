@@ -1,18 +1,77 @@
 .todo-items {
     display: flex;
+    gap: 16px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-.todo {
+.todo-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 400px;
+}
+
+.todo-item input[type='checkbox'] {
+    accent-color: var(--primary);
+}
+
+.todo-ui {
+    max-height: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
-    padding: 2px;
+    padding: 2px 4px;
     flex: 1 1 100%;
-    color: var(--primary);
     border: 2px solid var(--primary);
+    box-shadow: var(--box-shadow);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.todo-data {
+    display: none;
+    background-color: var(--secondary);
+    margin: 0 1px;
+    border: solid var(--primary);
+    border-width: 0 2px 2px 2px;
+}
+
+.todo-data p {
+    margin-bottom: 4px;
+}
+
+.todo-data p b,
+.todo-data label {
+    font-size: 1.1rem;
+}
+
+.todo-data .todo-category,
+.todo-data .todo-notes,
+.todo-data .todo-status {
+    padding: 8px;
+}
+
+.todo-data .todo-notes {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.todo-data .todo-status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-details {
+    display: block;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.8s;
 }
 
 .todo-details,
@@ -29,13 +88,27 @@
     font-weight: 900;
 }
 
+.todo-details,
+.remove-todo {
+    cursor: pointer;
+}
+
 .todo-details {
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    cursor: pointer;
+}
+
+.todo-details:active {
+    border-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .remove-todo {
     padding: 2px 4px;
+}
+
+.todo-uuid {
+    display: none;
 }

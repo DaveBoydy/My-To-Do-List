@@ -16,4 +16,6 @@
 
     --intro-title: 48px;
     --intro-title-big: 64px;
+
+    --box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.7);
 }

@@ -1,7 +1,3 @@
-.p-completed {
-    background-color: var(--priority-completed);
-}
-
 .p-low {
     background-color: var(--priority-low);
 }
@@ -12,6 +8,10 @@
 
 .p-high {
     background-color: var(--priority-high);
+}
+
+.p-completed {
+    background-color: var(--priority-completed);
 }
 
 .color-keys {

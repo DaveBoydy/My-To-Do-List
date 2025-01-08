@@ -10,25 +10,21 @@
     flex-direction: column;
 }
 
-#todo-options {
-    margin: 16px 0 16px 0;
-}
-
-#temp-category-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .sidebar label {
     margin-bottom: 4px !important;
+}
+
+.todo-notes {
+    margin-top: 4px;
 }
 
 .sidebar h2 {
     margin: 0 0 16px 0;
 }
 
-.sidebar [id$='filter'],
 .sidebar button,
+.sidebar select,
+.sidebar input,
 .todo {
     cursor: pointer;
 }
@@ -39,25 +35,67 @@
     margin-bottom: 16px;
 }
 
+.sidebar button:active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.sidebar .todo-notes {
+    width: 100%;
+}
+
+.sidebar .todo-notes:active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.sidebar select:focus,
+.sidebar input:focus,
+.sidebar textarea:focus {
+    outline-color: var(--primary);
+}
+
+.sidebar input,
+.sidebar select,
+.sidebar textarea {
+    padding: 2px;
+    margin-bottom: 16px;
+}
+
+#todo-options {
+    margin: 16px 0 16px 0;
+}
+
+#temp-category-container,
+#form-todo-container {
+    display: flex;
+    flex-direction: column;
+}
+
 #temp-category-buttons,
+#temp-todo-buttons,
 #option-buttons {
     display: flex;
     gap: 6px;
 }
 
-.sidebar [id$='filter'] {
-    margin-bottom: 16px;
+#option-buttons button,
+#temp-todo-buttons button,
+#temp-category-buttons button {
+    flex: 1 1 50%;
 }
 
-.sidebar [id$='filter']:focus {
-    outline: 0;
+#add-todo-item-textarea {
+    display: none;
+    position: absolute;
+    box-shadow: var(--box-shadow);
+    padding: 4px;
 }
 
-.sidebar input[type='text'] {
-    padding: 2px;
-    margin-bottom: 16px;
-}
-
-.sidebar input[type='text']:focus {
-    outline-color: var(--primary);
+#temp-todo-notes:active #add-todo-item-textarea,
+#temp-todo-notes #add-todo-item-textarea:hover,
+#temp-todo-notes #add-todo-item-textarea:focus {
+    display: block;
 }

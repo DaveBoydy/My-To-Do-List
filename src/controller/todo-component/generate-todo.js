@@ -12,16 +12,13 @@ export default function generateTodo(
     selectValue,
     textAreaValue,
 ) {
-    // dateValue === ''
-    //     ? (dateValue = format(new Date(), 'dd/MM/yyyy'))
-    //     : (dateValue = format(dateValue, 'dd/MM/yyyy'));
-
     dateValue === ''
         ? (dateValue = format(new Date(), 'yyyy/MM/dd'))
         : (dateValue = format(dateValue, 'yyyy/MM/dd'));
 
+    const sanitizeText = textValue.replace(/\s+/g, '-');
     const uuid = crypto.randomUUID();
-    const todoKey = `${textValue}${uuid}`;
+    const todoKey = `${sanitizeText}${uuid}`;
 
     const todo = CreateTodoItem().makeTodo(
         textValue,
@@ -36,7 +33,7 @@ export default function generateTodo(
 
     todoContainer.prepend(todo);
 
-    const dynamicTodoID = document.querySelector(`#${textValue}${uuid}`);
+    const dynamicTodoID = document.querySelector(`#${sanitizeText}${uuid}`);
 
     if (dynamicTodoID.getAttribute('listener') !== 'true') {
         dynamicTodoID.setAttribute('listener', true);

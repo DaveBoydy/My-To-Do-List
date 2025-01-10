@@ -5,8 +5,8 @@ import PubSub from 'pubsub-js';
  */
 
 export default function SubscribeEvents() {
-    const setSubscription = (topic, data) => {
-        PubSub.subscribe(topic, data);
+    const setSubscription = (topic, subscriber) => {
+        PubSub.subscribe(topic, subscriber);
     };
 
     return {

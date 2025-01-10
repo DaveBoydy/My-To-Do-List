@@ -23,9 +23,20 @@ export default function SelectOption() {
         }
     };
 
+    const setFilterSelectedOption = (option, elementID) => {
+        let select = document.querySelector(`#${elementID}`);
+
+        for (let i = 0, n = select.options.length; i < n; i++) {
+            if (select.options[i].value === option) {
+                select.options[i].setAttribute('selected', 'selected');
+            }
+        }
+    };
+
     return {
         initSelectWithOptions,
         addOption,
         removeOption,
+        setFilterSelectedOption,
     };
 }

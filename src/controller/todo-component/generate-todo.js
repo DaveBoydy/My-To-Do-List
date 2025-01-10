@@ -12,9 +12,13 @@ export default function generateTodo(
     selectValue,
     textAreaValue,
 ) {
+    // dateValue === ''
+    //     ? (dateValue = format(new Date(), 'dd/MM/yyyy'))
+    //     : (dateValue = format(dateValue, 'dd/MM/yyyy'));
+
     dateValue === ''
-        ? (dateValue = format(new Date(), 'dd/MM/yyyy'))
-        : (dateValue = format(dateValue, 'dd/MM/yyyy'));
+        ? (dateValue = format(new Date(), 'yyyy/MM/dd'))
+        : (dateValue = format(dateValue, 'yyyy/MM/dd'));
 
     const uuid = crypto.randomUUID();
     const todoKey = `${textValue}${uuid}`;

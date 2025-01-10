@@ -4,6 +4,7 @@ import SubscribeEvents from './subscribe-events';
 import addCategoryInput from '../controller/category-component/add-category';
 import addTodoInput from '../controller/todo-component/add-todo';
 import todoItemEvent from '../controller/todo-component/todo-item-event';
+import StickyFilters from '../controller/filter-component/sticky-filters';
 
 /*
  ** Execute logic after the DOM has loaded.
@@ -26,6 +27,27 @@ addEventListener('load', () => {
         'Add or remove Todo',
     );
 
+    PublishEvents().setEventListenerPublication(
+        DomCache().getCategoryFilter(),
+        'change',
+        'CATEGORY FILTER',
+        DomCache().getCategoryFilter(),
+    );
+
+    PublishEvents().setEventListenerPublication(
+        DomCache().getPriorityFilter(),
+        'change',
+        'PRIORITY FILTER',
+        DomCache().getPriorityFilter(),
+    );
+
+    PublishEvents().setEventListenerPublication(
+        DomCache().getDateFilter(),
+        'change',
+        'DATE FILTER',
+        DomCache().getDateFilter(),
+    );
+
     /*
      ** Subscribe to PubSubJS events.
      */
@@ -34,4 +56,19 @@ addEventListener('load', () => {
     SubscribeEvents().setSubscription('ADD TODO', addTodoInput);
 
     SubscribeEvents().setSubscription('TODO EVENT', todoItemEvent);
+
+    SubscribeEvents().setSubscription(
+        'CATEGORY FILTER',
+        StickyFilters().updateCategoryFilter,
+    );
+
+    SubscribeEvents().setSubscription(
+        'PRIORITY FILTER',
+        StickyFilters().updatePriorityFilter,
+    );
+
+    SubscribeEvents().setSubscription(
+        'DATE FILTER',
+        StickyFilters().updateDateFilter,
+    );
 });

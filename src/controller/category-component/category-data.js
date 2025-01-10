@@ -1,19 +1,19 @@
 import StorageInterpreter from '../../model/local-storage/storage-interpreter';
 
 export default function categoryData() {
-    const categoryKey = 'category data';
-    const categoryID = '#category-filter';
+    const CATEGORY_KEY = 'category data';
+    const CATEGORY_ID = '#category-filter';
     let categorySet = null;
 
-    StorageInterpreter().searchKeyExists(categoryKey)
+    StorageInterpreter().searchKeyExists(CATEGORY_KEY)
         ? (categorySet = new Set(
-              StorageInterpreter().readUsingKey(categoryKey),
+              StorageInterpreter().readUsingKey(CATEGORY_KEY),
           ))
         : (categorySet = new Set());
 
     const getSet = () => categorySet;
-    const getKey = () => categoryKey;
-    const getID = () => categoryID;
+    const getKey = () => CATEGORY_KEY;
+    const getID = () => CATEGORY_ID;
 
     return {
         getSet,
